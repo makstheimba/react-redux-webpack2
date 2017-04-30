@@ -17,10 +17,12 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: [/node_modules/, /typings/],
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react', 'stage-1'],
-        },
+        loaders: [{
+          loader: 'babel-loader',
+          query: {
+            presets: ['es2015', 'react', 'stage-1'],
+          },
+        }],
       },
       {
         test: /\.scss$/,

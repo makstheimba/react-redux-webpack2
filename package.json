@@ -1,11 +1,13 @@
 {
-  "name": "react_sandbpox",
+  "name": "react-redux-webpack2-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "bundle.js",
   "scripts": {
-    "test": "mocha --reporter spec 'test/**/*.js'",
-    "start": "webpack-dev-server --inline --hot"
+    "test": "env NODE_PATH=$NODE_PATH:$PWD/src mocha --compilers js:babel-core/register --reporter spec 'test/**/*.js'",
+    "watch": "env NODE_PATH=$NODE_PATH:$PWD/src mocha --compilers js:babel-core/register --reporter spec 'test/**/*.js' -w",
+    "dev": "webpack-dev-server --inline --hot",
+    "start": "webpack"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +28,7 @@
     "eslint-plugin-react": "^6.10.3",
     "mocha": "^3.2.0",
     "node-sass": "^4.1.1",
+    "react-hot-loader": "^3.0.0-beta.6",
     "sass-loader": "^6.0.3",
     "scss-loader": "0.0.1",
     "style-loader": "^0.16.1",
